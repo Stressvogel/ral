@@ -7,7 +7,7 @@
 
 #include <cstdint>
 
-class ral {
+class RAL {
 protected:
     int width;
     int height;
