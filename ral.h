@@ -37,7 +37,7 @@ public:
      * @param height  Hoogte
      * @param color   5-6-5 RGB code in een 16-bit integer
      **/
-    virtual void ral_draw_box(uint16_t x, uint8_t y, uint16_t width, uint8_t height, uint16_t color) = 0;
+    virtual void ral_draw_box(uint16_t x, uint8_t y, uint16_t width, uint8_t height, uint16_t color, bool fill = true) = 0;
 
     /**
      * Teken een sprite
