@@ -1,6 +1,13 @@
-//
-// Created by Aran on 02/12/2021.
-//
+/*
+ * ral_display_vga.c
+ *
+ * Omschrijving:	Driver voor een VGA-monitor
+ * Hoofdauteur:		Aran Kieskamp
+ *
+ * Project Stressvogel
+ * Computer Engineering
+ * Windesheim, 2021-2022
+ */
 
 #ifndef SOFTWARE_VGA_H
 #define SOFTWARE_VGA_H
@@ -21,49 +28,50 @@ namespace ral {
  **/
 class display_vga : public display {
 protected:
-    alt_up_video_dma_dev *video_dev;
+	alt_up_video_dma_dev *video_dev;
 
 public:
-    display_vga();
+	display_vga();
 
-    virtual ~display_vga();
+	virtual ~display_vga();
 
-    /**
-     * @inheritDoc
-     **/
-    void init();
+	/**
+	 * @inheritDoc
+	 **/
+	void init();
 
-    /**
-     * @inheritDoc
-     **/
-    void draw_pixel(uint16_t x, uint8_t y, uint16_t color);
+	/**
+	 * @inheritDoc
+	 **/
+	void draw_pixel(uint16_t x, uint8_t y, uint16_t color);
 
-    /**
-     * @inheritDoc
-     **/
-    void draw_box(uint16_t x, uint8_t y, uint16_t width, uint8_t height, uint16_t color, bool fill = true);
+	/**
+	 * @inheritDoc
+	 **/
+	void draw_box(uint16_t x, uint8_t y, uint16_t width, uint8_t height, uint16_t color, bool fill = true);
 
-    /**
-     * @inheritDoc
-     **/
-    void draw_sprite(uint16_t x, uint8_t y, uint16_t width, uint8_t height, uint16_t ***sprite);
+	/**
+	 * @inheritDoc
+	 **/
+	void draw_sprite(uint16_t x, uint8_t y, uint16_t width, uint8_t height, uint16_t ***sprite);
 
-    /**
-     * @inheritDoc
-     **/
-    void clear();
+	/**
+	 * @inheritDoc
+	 **/
+	void clear();
 
-    /**
-     * @inheritDoc
-     **/
-    uint16_t get_width();
+	/**
+	 * @inheritDoc
+	 **/
+	uint16_t get_width();
 
-    /**
-     * @inheritDoc
-     **/
-    uint8_t get_height();
+	/**
+	 * @inheritDoc
+	 **/
+	uint8_t get_height();
 };
 
 } // namespace ral
 
 #endif //SOFTWARE_VGA_H
+
